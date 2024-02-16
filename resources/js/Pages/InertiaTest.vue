@@ -3,7 +3,7 @@ import { Link } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
 const newTitle = ref('');
-const newContent =ref('');
+const newContent = ref('');
 
 </script>
 
@@ -27,11 +27,10 @@ const newContent =ref('');
   <input type="text" name="newTitle" v-model="newTitle">{{ newTitle }}<br>
   <input type="text" name="newContent" v-model="newContent">{{ newContent }}<br>
 
-  <Link as="button" :href="route('inertia.store')" method="post"
-  :data="{
+  <Link as="button" :href="route('inertia.store')" method="post" :data="{
     title: newTitle,
     content: newContent,
   }">
-    DB保存テスト
+  DB保存テスト
   </Link>
 </template>
